@@ -1,0 +1,659 @@
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!-- class mb-title 是标题图片   xj-l-m clearfix 为总体图片  -->
+<!-- pic 第一张图片  360 x 480   第二张   480 x 640   总体信息  660 x 398    -->
+ <html>
+<head> 
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<title>学信档案</title>
+<meta name="keywords" content="学信档案，高等教育信息，学籍学历，图片校对">
+<meta name="description" content="“学信档案”是中国高等教育学生信息网（简称“学信网”）各类学生个人信息档案的总称，涉及全国高等教育学生信息数据库中各类学生的学籍、学历、招生录取、助学贷款等信息。">
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<meta name="format-detection" content="telephone=no, email=no">
+<link rel="dns-prefetch" href="//t1.chei.com.cn?v=1531374966451">
+<link rel="dns-prefetch" href="//t2.chei.com.cn?v=1531374966451">
+<link rel="dns-prefetch" href="//t3.chei.com.cn?v=1531374966451">
+<link rel="dns-prefetch" href="//t4.chei.com.cn?v=1531374966451">
+<link rel="dns-prefetch" href="//ssl.google-analytics.com?v=1531374966451">
+<link rel="icon" href="https://t1.chei.com.cn/archive/favicon.ico" type="image/x-icon" />
+<!--新的样式-->
+<link href="https://t1.chei.com.cn/common/bootstrap3.3.5/css/bootstrap.min.css" rel="stylesheet"/> 
+<link href="https://t1.chei.com.cn/common/ch/iconfont.css" rel="stylesheet"/>
+<link rel="stylesheet" href='https://t3.chei.com.cn/archive/css/custom/archive.min.css?20190702' />
+<script type="text/javascript" src="https://t1.chei.com.cn/common/jquery/1.9.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+    (function () {
+        window.zhuge = window.zhuge || [];
+        window.zhuge.methods =
+            "_init identify track getDid getSid getKey setSuperProperty setUserProperties setPlatform".split(" ");
+        window.zhuge.factory = function (b) {
+            return function () {
+                var a = Array.prototype.slice.call(arguments);
+                a.unshift(b);
+                window.zhuge.push(a);
+                return window.zhuge;
+            }
+        };
+        for (var i = 0; i < window.zhuge.methods.length; i++) {
+            var key = window.zhuge.methods[i];
+            window.zhuge[key] = window.zhuge.factory(key);
+        }
+        window.zhuge.load = function (b, x) {
+            if (!document.getElementById("zhuge-js")) {
+                var a = document.createElement("script");
+                var verDate = new Date();
+                var verStr = verDate.getFullYear().toString() +
+                    verDate.getMonth().toString() + verDate.getDate().toString();
+                a.type = "text/javascript";
+                a.id = "zhuge-js";
+                a.async = !0;
+                a.src = "https://tt.chei.com.cn/zhuge.js?v=" + verStr;
+                a.onerror = function () {
+                    window.zhuge.identify = window.zhuge.track =
+                        function (ename, props, callback) {
+                            if (callback && Object.prototype.toString.call(callback) ===
+                                '[object Function]') {
+                                callback();
+                            } else if (Object.prototype.toString.call(props) ===
+                                '[object Function]') {
+                                props();
+                            }
+                        };
+                };
+                var c = document.getElementsByTagName("script")[0];
+                c.parentNode.insertBefore(a, c);
+                window.zhuge._init(b, x)
+            }
+        };
+    })();
+
+    
+    var zhugeFun ={
+        init:function(){
+            var _url = window.location.href,OpenautoTrack = false;//是否开启全埋点
+            if(_url.indexOf('/archive/index.action')>-1){//pc首页
+                OpenautoTrack = true;
+            }
+            window.zhuge.load('0d76434d9bb94abfaa16e1d5a3d82b52', { //配置应用的AppKey
+                autoTrack: OpenautoTrack
+            });
+        },
+        votePv:function(name,from,type){
+            // 问卷浏览量
+            // name string  问卷名称
+            // from string 来源
+            // type string 类型，就业还是学职
+            zhuge.track('浏览问卷', {
+               '问卷名称': name,
+               '访问来源': from,
+               '问卷类型': type
+            });
+        },
+        voteClick:function(name,from,type){
+            // 问卷点击量
+            // name string  问卷名称
+            // from string 来源
+            // type string 类型，就业还是学职
+            zhuge.track('点击问卷', {
+               '问卷名称': name,
+               '访问来源': from,
+               '问卷类型': type
+            });
+        },
+        voteSubmit:function(name,from,type,time){
+            // 问卷提交量
+            // name string  问卷名称
+            // from string 来源
+            // type string 类型，就业还是学职
+            // time num 完成问卷用时
+            zhuge.track('提交问卷', {
+               '问卷名称': name,
+               '访问来源': from,
+               '问卷类型': type,
+               '问卷用时': time
+            });
+        },
+        voteClickSubmit:function(name,from,type){
+            // 问卷前台校验通过，还未传后台前的提交量
+            // name string  问卷名称
+            // from string 来源
+            // type string 类型，就业还是学职
+            zhuge.track('点提交按钮', {
+               '问卷名称': name,
+               '访问来源': from,
+               '问卷类型': type
+            });
+        },
+        //去往新职业
+        goNcss:function(from,to){
+            zhuge.track('点击新职业', {
+               '来源': from,
+               '去向': to
+            });
+        }
+    }
+    zhugeFun.init(); 
+
+</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100524-5"></script>
+<script>
+// 放在ga.jsp 中
+function gaTrackerOutboundLink(ele,eventCategory,eventAction,eventLabel){
+    gtag('event', eventAction, {
+      'event_category': eventCategory,
+      'event_label': eventLabel
+    });
+    return true;
+}
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-100524-5', {'sample_rate': 1});
+
+</script>
+</head>
+<body>
+    <style type="text/css">
+    .webuploader-container .webuploader-pick{
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        color: #fff;
+        text-align: center;
+         border-radius:0; 
+        overflow: hidden;
+        padding: 0 30px;
+        background: #25b887;
+    }
+    .pdf-show{
+        float: left;
+        display:inline-block; 
+        border: 1px solid #ccc;
+        padding:0 10px;
+        width:144px;
+        height: 32px;
+        margin-right:5px;        
+    }
+    .pdf-show .item{
+        display:inline-block;
+        width:144px;  
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    .ctl-btn{
+        vertical-align: 12px;
+    }
+</style>
+	<div class="outer-layer">
+		<div class="outer-layer-content">
+		    
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://t1.chei.com.cn/common/css/animate.css"> 
+<img src="https://t1.chei.com.cn/common/wap/images/share_xxda.jpg?v=1477569249589" width='0' height='0' style='position: absolute;top:-100px;left: 0'/>
+<div class="header">
+    <div class="width1180 clearfix">
+        <div class="logo"><a href="/archive/index.jsp" target="_parent" class="home"></a></div>
+        <div class='homePage-nav'>
+            <a href="/archive/index.action?trnd=78076251385152366075913866040187">首页</a>
+        </div>
+        <div id="nav-first" class='header-nav'>
+            <dl id="gdjy-nav">    
+                <dt>高等教育信息<span class="sanjiao"></span></dt>
+                <dd style='display: none'></dd>
+            </dl>
+            <dl id="bab-nav">    
+                <dt>在线验证报告<span class="sanjiao"></span></dt>
+                <dd style='display: none'></dd>
+            </dl>
+            <dl id="rzbg-nav">    
+                <dt>学历认证与成绩验证<span class="sanjiao"></span></dt>
+                <dd style='display: none'></dd>
+            </dl>
+            <dl id="gjhz-nav">    
+                <dt>国际合作申请<span class="sanjiao"></span></dt>
+                <dd style='display: none'></dd>
+            </dl>
+            <dl>    
+                <dt id="vote-nav">调查/投票<span class="sanjiao" style="left:46px;"></span></dt>
+                <dd style='display: none'></dd>
+            </dl>
+            <dl>    
+                <dt id="xz-nav"><a href="http://xz.chsi.com.cn/survey/index.action" class="xz-link" target="_blank">职业测评</a></dt>
+                <dd style='display: none'></dd>
+            </dl>
+            <dl>    
+                <dt id="ncss-nav"><a href="http://www.ncss.cn/" onmousedown="gaTrackerOutboundLink(this,'ncssindex', 'click', 'frommenu');zhugeFun.goNcss('frommenu','ncssindex')" target="_blank"  class="jy-link">就业</a></dt>
+                <dd style='display: none'></dd>
+            </dl>
+            <div class="header-nav-bg" style="display:none;">&nbsp;</div>
+        </div>
+        
+        <div class="nav-userinfo">
+            
+                <div class=" btn-group">
+                    <div class="user dropdown-toggle" data-toggle="dropdown"><i class="iconfont" title="个人中心">&#xe647;</i>个人中心<span class="caret"></span>
+                    </div>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="https://account.chsi.com.cn/account/account!show" target="_blank" ><i class="iconfont" title="账号">&#xe645;</i>账号</a>
+                      </li>
+                      
+                      <li><a href='https://account.chsi.com.cn/passport/logout?service=https://my.chsi.com.cn/archive/index.jsp'><i class="iconfont" title="退出">&#xe695;</i>退出</a></li>
+                    </ul>
+                </div>
+            
+            
+        </div>
+    </div>
+</div>
+<div  class="sub_nav"> 
+    <div id="nav-second" class="width1180 clearfix">                                
+        <ul class="sub_nav_mian" style='display:none'>
+            <li>学籍信息/图像校对</li>
+            <li>学历信息</li>
+            <li>考研信息</li>
+            <li>毕业去向</li>
+        </ul>
+        <ul class="sub_nav_mian" style='display:none'>
+            <li>首页</li>
+            <li>高等学籍</li>
+            <li>高等学历</li>
+        </ul>
+        <ul class="sub_nav_mian" style='display:none'>
+            <li>首页</li>
+            <li>绑定报告</li>
+        </ul>
+        <ul class="sub_nav_mian" style='display:none'>
+            <li>首页</li>
+            <li>传输费用</li>
+            <li>英文翻译</li>
+        </ul>
+        <ul class="sub_nav_mian" style='display:none'>
+            <li>首页</li>
+            <li onmousedown="gaTrackerOutboundLink(this,'jygz', 'click', 'survey_jygz_menu')">就业跟踪</li>
+            <li onmousedown="gaTrackerOutboundLink(this,'zydc', 'click', 'survey_zydc_menu')">职业调查</li>
+            <li>专业推荐</li>
+            <li>专业满意度</li>
+            <li>院校满意度</li>
+        </ul> 
+        <ul class="sub_nav_mian" style='display:none'>
+            <li><a href="http://xz.chsi.com.cn/home.action" target="_blank">首页</a></li>
+            <li><a href="http://xz.chsi.com.cn/speciality/index.action" target="_blank">专业百科</a></li>
+            <li><a href="http://xz.chsi.com.cn/speciality/index.action" target="_blank">课程评价</a></li>
+            <li><a href="http://xz.chsi.com.cn/survey/index.action" target="_blank">职业测评</a></li>
+            <li><a href="http://xz.chsi.com.cn/occupation/index.action" target="_blank">职业百科</a></li>
+        </ul>
+        <ul class="sub_nav_mian" style='display:none'>
+            <li><a href="http://www.ncss.cn/" onmousedown="gaTrackerOutboundLink(this,'ncssindex', 'click', 'frommenu');zhugeFun.goNcss('frommenu','ncssindex')" target="_blank">首页</a></li>
+            <li><a href="http://job.ncss.cn/student/jobs/index.html" onmousedown="gaTrackerOutboundLink(this,'ncsszw', 'click', 'frommenu');zhugeFun.goNcss('frommenu','ncsszw')" target="_blank">职位</a></li>
+            <li><a href="http://job.ncss.cn/student/company/index.html" onmousedown="gaTrackerOutboundLink(this,'ncssqy', 'click', 'frommenu');zhugeFun.goNcss('frommenu','ncssqy')" target="_blank">企业</a></li>
+            <li><a href="http://www.ncss.cn/wlzph/" onmousedown="gaTrackerOutboundLink(this,'ncsszph', 'click', 'frommenu');zhugeFun.goNcss('frommenu','ncsszph')" target="_blank">招聘会</a></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+var SpathMy = 'https://my.chsi.com.cn/archive/';
+var SpathGaoKao = 'https://my.chsi.com.cn/zyzsk/';
+</script>
+<script src='https://t2.chei.com.cn/archive/js/common/header-menu-1.0.6.js'></script>
+
+
+		    <div class='main'>
+		        
+
+
+
+
+
+
+
+<script src='https://t1.chei.com.cn/archive/js/archive/photoquery-2.0.0.js'></script>
+<script src="https://t4.chei.com.cn/common/plugins/jqueryraty/jquery.raty.min.js"></script>
+
+<div class="xj_top">
+    <span class='find_xj'>您一共有<span class="xj_num"> 1 </span>个学籍</span>
+    还有学籍没有显示出来？ <a href='###' onclick="bindxjreport();return false;">尝试绑定学籍</a>　|　<a href='http://www.chsi.com.cn/help/cxfw.jsp' target="_blank">学籍查询范围</a>
+</div>
+
+    <div class="clearfix">
+        <div class="m-left xj-left main-block border-shadow marginB0">
+            <div class="mb-title"><img src="https://my.chsi.com.cn/archive/gdjy/photo/show.action?pid=0092f5dbdbb0241212e6424d62bdde47" /></div>
+            <span class='mb-title-a'><i class="iconfont">&#xe685;</i><a href="/archive/bab/xj/show.action?trnd=29334260167728599360113419905097#zxyz_1">查看该学籍的在线验证报告</a></span>
+            <div class="xj-l-m clearfix">
+                <div class="xj-m-left">
+                    <div class="pic">
+                        
+                            <img src="./images/image1.png" align="absmiddle" width="120" height="160" alt="录取照片"/>
+                        
+                        
+                    </div>
+                    <p>录取照片</p>
+                    <div class="pic">
+                        
+                            <img id="1" src="./images/total.png" align="absmiddle" width="120" height="160" alt="学历照片"/>
+                        
+                        
+                        <div id="pic_tips_1"></div>
+                    </div>
+                    <p>学历照片</p>                   
+                </div>
+                <div class="xj-m-r">
+                    <img class="xjxx-loading" src="https://t1.chei.com.cn/common/images/loading-dot.gif">
+                    <img class="xjxx-img" onload="$(this).css('visibility','visible').prev().hide();"
+                     onerror="this.onerror=null;$(this).prev().hide();
+                     this.src='https://my.chsi.com.cn/archive/images/xj/no-dangan.png';this.style.margin = '100px';"
+                      src="./images/show-index.png"  />
+                </div>
+                <div class="clearFloat">&nbsp;</div>
+            </div>
+            <div id="pic_query_result_1"></div>
+            
+                
+                    <form id="collate_1" name="collate_1" action="/archive/gdjy/xj/show.action" method="post">
+                        <input type="hidden" name="" value="" id="limitxjjdrq_1"/>
+                        <input type="hidden" name="" value="1560225320" id="limitzpjdrq_1"/>
+                        <input type="hidden" name="id" value="trvu3f21p38v0h5k" id="xjId_1"/>
+                        <input type="hidden" name="zpxxCollateStatus" value="1" id="collate_1_zpxxCollateStatus" class="zpxxCollateStatus"/>
+                        <input type="hidden" name="tb" value="0" id="tb_trvu3f21p38v0h5k"/>
+                        <input type="hidden" id="check_collate_csrf_1" name="cprmcsrf" value="" />
+                        <div class="jd_result clearfix">
+                            <div class="left">
+                                <span class="jd_tip">学历照片校对：</span>
+                                
+                                    <span class="jd_text">学历照片正确</span>
+                                    
+                                     
+                                    
+                                        <a href="#" id="collate_again_1" onClick="collateAgain('1');return false;" class="gg_jd" style="text-decoration:underline;">更改校对结论</a>
+                                    
+                                    
+                                    <span style="color:#F00;" id="zpjdsx_1"/></span>
+                                
+                                                                    
+                            </div>    
+                            <div class="right">
+                                
+                                
+                                    
+                                        <a style="display:none;" id="collate_again_1_1" onclick="updatezpinfo('1')" class="big-btn photo_right">正确</a>
+                                        <a style="display:none;" id="collate_again_2_1" onclick="editzpjdxx('1')" class="big-btn photo_wrong">有误</a>
+                                    
+                                    
+                                
+                            </div>
+                            <div class="clearFloat">&nbsp;</div>
+                        </div>
+                    </form>
+
+
+
+
+                
+            
+        </div>
+        <div class="m-right border-shadow marginB0" id="myd_trvu3f21p38v0h5k">
+        </div>
+        <div class="clearFloat">&nbsp;</div>
+        <script>
+            photoQueryCheck("trvu3f21p38v0h5k",'xj',"1");
+        </script>
+    </div>
+
+
+
+<div id="ptgxbysjyzkSurvey" class="margint20">
+    <div class='my-survery xj-survery' id='ptgxbysjyzk_survey' style='display: none;'>
+    </div>
+</div>
+
+<!--b谈层测试页面-->
+<div class="modal fade" id="bPlan" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog zydc-modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×
+                </button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" 
+                        aria-hidden="true">×
+                </button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden"  id="urlTrnd" value="29334260167728599360113419905097"/>
+<script>
+$(window).load(function() {
+     //设置右侧
+    setTimeout(function(){
+        setRight();
+    },200);
+});
+function setRight(){
+    //设置说明的width，当只有一条数据且正在审核时，说明文字需要通栏显示
+    if($('.m-right').length==0){
+        $('.sm-text').width('100%');
+    }
+    //设置右侧高度
+    $('.m-right').each(function(index,ele){
+        var $this  = $(ele),
+            $left = $this.parent().find('.m-left'),
+            leftH = $left.height(),
+            height = $this.height() || 480;
+        height = height>leftH ? height : leftH;
+        $this.height(height+20);
+        $left.height(height);
+    });
+}
+/*检查照片评价层*/
+function  appraisalFromCookie(tb){
+    var cookieValue =  getCookie("appraisal_"+tb);
+    if( cookieValue != "noAppraisal" ){
+        $('.main-block').eq(tb).find('.appraisal').click();
+    }
+}
+/*评价照片层的取消按钮事件*/
+function  addAppraisalCookie(tb){
+    var cookieName = "appraisal_"+tb;
+    addCookie(cookieName,"noAppraisal");
+    $('#myModal').modal('hide')
+}
+/*修改图片校对结论*/
+function  collateAgain(tbCount){
+   $("#collate_again_"+tbCount).hide();
+   $("#collate_again_1_"+tbCount).show();
+   $("#collate_again_2_"+tbCount).show();
+   return false;
+}   
+/*校对结论生效*/
+function  zpjdsxInfo(tbCount){
+   $("#collate_again_"+tbCount).hide();
+   $("#zpjdsx_"+tbCount).html("校对结论已生效。");
+   $("#zpjdsx_"+tbCount).show();
+   return false;
+} 
+/*学历照片评价*/
+function appraisalPhoto(xjid){
+    var id = xjid;
+    var tb = $("#tb_"+id).val();
+    $.post(
+        '/archive/gdjy/zp/pj/photoAppraisal.action',
+        {'archiveId':id,'tb':tb},
+        function (html) {
+            $("#myModal .modal-title").html("学历照片评价");
+            $("#myModal .modal-body").html(html);
+            $('#myModal').modal('show');
+        }
+    );
+}
+/*学历照片正确*/
+function updatezpinfo(zpformid){
+   $("#myModal .modal-body").html("<div class='collate_tip01'>提示：学历照片校对结论将在24小时后正式提交至就读院校学籍管理部门；<br />　　　正式提交前校对结论可以修改；<br />　　　正式提交后若仍需修改，请联系就读院校学籍管理部门。</div><div class='center' style='margin:10px;'><input type='button' class='button4' onclick='updatezpjdxx("+zpxxformid+")' value='确定' />  <input type='button' class='button4' onclick='closedialog()' value='返回' /></div>");
+    var zpxxformid = zpformid;
+    $("#collate_"+zpxxformid).find(".zpxxCollateStatus").val("1");
+    var ops = {
+        type:'post',
+        url:'/archive/gdjy/zp/jd/editzpjdxx.action',
+        dataType:'html',
+        success:function(data){
+            $("#myModal .modal-title").html("学历照片完全正确"); 
+            $("#myModal .modal-body").html(data);
+            $('#myModal').modal('show');
+        }
+    };
+    $("#collate_"+zpxxformid).ajaxSubmit (ops);
+    //$("#dialog").dialog('option', 'buttons', null);
+}
+/*学历照片错误*/
+function editzpjdxx(zpformid){
+    var zpxxformid = zpformid;
+    $("#collate_"+zpxxformid).find(".zpxxCollateStatus").val("0");
+    var ops = {
+        type:'post',
+        url:'/archive/gdjy/zp/jd/editzpjdxx.action',
+        dataType:'html',
+        success:function(data){
+            $("#myModal .modal-title").html("学历照片错误原因"); 
+            $("#myModal .modal-body").html(data);
+            $('#myModal').modal('show');
+        }
+    };
+    $("#collate_"+zpxxformid).ajaxSubmit (ops);
+   //$("#dialog").dialog('option', 'buttons', null);
+}
+/*更新图片校对信息*/
+function updatezpjdxx(tb){
+    var zpxxformid = tb+1;
+    var trnd = $("#urlTrnd").val();
+    $("#check_collate_csrf_"+zpxxformid).val('05817989fe859d3a3eebd0241040032f')
+    $("#collate_"+zpxxformid).attr('action','/archive/gdjy/zp/jd/updatezpjdxx.action');
+    $("#collate_"+zpxxformid).submit();
+}
+//绑定学籍
+function bindxjreport() {
+    $.ajax({
+        type: 'GET',
+        data: {
+
+        },
+        url: '/archive/gdjy/xj/showbind.action',
+        dataType: 'html',
+        success: function(data) {
+            $("#myModal .modal-title").html("学籍绑定");
+            $("#myModal .modal-body").html(data);
+            $('#myModal').modal('show');
+        }
+    });
+}
+function addCookie(name,value){
+  var cookieString=name+"="+escape(value);
+  document.cookie=cookieString;
+  document.cookie.setSecure=true;//只允许在https环境下使用cookie
+} 
+function getCookie(name){
+    var strCookie=document.cookie;
+    var arrCookie=strCookie.split("; ");
+    for(var i=0;i<arrCookie.length;i++){
+        var arr=arrCookie[i].split("=");
+        if(arr[0]==name)return arr[1];
+    }
+    return "";
+} 
+function loadbinddialog(){
+    //没有学籍信息，这是一个弹层
+    var temp  ='<p style="text-align:left">系统没有找到您的在校生学籍信息，有可能是因为您注册时填写的姓名和证件号码两项与学校上报的学籍注册数据不相同导致的。<br/><br/></p>';
+    temp +='<p style="text-align:left">1、查看您注册时填写的姓名和证件号码信息&nbsp;<a href="https://account.chsi.com.cn/account/account!show" target="_blank" class="color5">点击查看</a><br/></p>';
+    temp +='<p style="text-align:left">2、姓名和证件号码无误，我还有学籍没显示出来&nbsp;<a href="###" aria-hidden="true" onclick=" bindxjreport(); return false;" class="color5">找找看？</a><br/><br/></p>';
+    temp +='<div class="modal-btn" style="margin-top:40px;"><a class="green-btn mid-btn" data-dismiss="modal" aria-hidden="true" >关闭</a></div>';
+
+    $("#myModal .modal-title").html("没有学籍");
+    $("#myModal .modal-body").html(temp);
+    $('#myModal').modal('show');
+}
+//解决2个谈层，关闭一个，就业调查的滚动条不管用问题	
+$('.modal').on('hidden.bs.modal', function () {
+    if($("#bPlan").hasClass('in')){
+        $("body").addClass("modal-open");
+    } 
+})
+// 初始化没有学籍的弹层开始
+
+
+    $(function(){   
+       //自动检测出照片评价层
+        var tb = 0;
+        var countSize = $('.main-block').size();
+        if( tb >= countSize ){
+            tb = 0;
+        }
+        appraisalFromCookie(tb);
+    })
+
+</script>
+		    </div>
+	    </div>
+    </div>
+    
+
+
+
+
+
+
+
+<div class="footer">
+	<a href="http://www.chsi.com.cn/" target="_blank">学信网</a>　|　<a href="/archive/help/index.action" target="_blank">帮助中心</a>　|　Copyright © 2003-2019 学信网 All Rights Reserved
+    <div id="loader"></div> 
+<script type="text/javascript" src="https://t1.chei.com.cn/common/plugins/validation/jquery.validate.min.js"></script>     
+<script type="text/javascript" src='https://t2.chei.com.cn/archive/js/jquery/jquery.form.js'></script>
+<script src="https://t1.chei.com.cn/common/bootstrap3.3.5/js/bootstrap.min.js"></script>
+<script src="https://t1.chei.com.cn/common/bootstrap-datetimepicker-v3/bootstrap-datetimepicker.min.js"></script>
+<script src='https://t2.chei.com.cn/archive/js/common/ie-prompt.min.js'></script>  
+<link rel="stylesheet" href='https://t2.chei.com.cn/archive/js/webuploader/webuploader.css' />
+<script src='https://t4.chei.com.cn/archive/js/webuploader/webuploader.js'></script> 
+<script type="text/javascript">
+    $(function(){
+        var identityTag = '33d012b4bbfd3043fb812dc4575eaf10';
+        if (identityTag!='Anonymous') {
+            zhuge.identify(identityTag);
+        }
+    })    
+</script>
+</body> 
+</html>

@@ -20,6 +20,9 @@ import dashboard from '@/module-dashboard/' // 面板
 //import demo from '@/module-demo/' // 面板
 import saasClient from '@/module-saas-client/' //企业管理
 import departments from '@/module-departments/' //部门管理
+import users from '@/module-employees' //用户权限管理
+import permissions from '@/module-permissions' //菜单权限配置
+import settings from '@/module-settings' //公司配置
 
 import tools from './utils/common.js'
 Vue.prototype.$tools = tools
@@ -29,6 +32,9 @@ Vue.use(dashboard, store)
 //Vue.use(demo, store)
 Vue.use(saasClient,store)
 Vue.use(departments,store)
+Vue.use(users,store)
+Vue.use(settings,store)
+Vue.use(permissions,store)
 
 
 /*
